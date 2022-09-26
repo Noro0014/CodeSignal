@@ -16,14 +16,27 @@ public class TheJourneyBegins {
 		return century;
 	}
 	
-	public String palindrome(String inputString) {
-	    String cadenaInvertida = "";
+	public static boolean palindrome (String inputString) {
 	    
-	    for (int i = 0; i < inputString.length(); i--) {
-	    	cadenaInvertida = String.valueOf(inputString.charAt(i));
-	    }
-	    	return cadenaInvertida;
-	    	
-	}
+		StringBuilder cadenaInvertida = new StringBuilder(inputString);
+		
+		cadenaInvertida = cadenaInvertida.reverse();
+		
+		String cadenaInvertidaFinal = cadenaInvertida.toString();
+		
+		
+		
+
+		boolean isPalindrome;
+		
+		if (inputString.equals(cadenaInvertidaFinal)){
+			isPalindrome = true;
+		} else {
+			isPalindrome = false;
+		}
+		
+		return isPalindrome;
+
+}
 	
 }

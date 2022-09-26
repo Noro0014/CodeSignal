@@ -6,7 +6,7 @@ import org.junit.Before;
 
 import dad.codesignal.TheJourneyBegins;
 
-public class AddTest {
+public class AddTest1 {
 	
 	private TheJourneyBegins tjb;
 	
@@ -49,7 +49,12 @@ public class AddTest {
 	
 	@Test
 	public void test7() {
-		assertEquals("aloh", tjb.palindrome("hola"));
+		assertEquals(false, tjb.palindrome("hola"));
+	}
+	
+	@Test
+	public void test8() {
+		assertEquals(true, tjb.palindrome("hola aloh"));
 	}
 	
 	
